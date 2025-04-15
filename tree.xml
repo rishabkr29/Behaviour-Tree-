@@ -1,0 +1,26 @@
+<root BTCPP_format="4" main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="root_sequence">
+      <NavigateToRoom name="navigate_to_room"/>
+      <OpenFridge name="open_fridge"/>
+      <PickApple name="pick_apple"/>
+      <ExitRoom name="exit_room"/>
+    </Sequence>
+  </BehaviorTree>
+
+  <TreeNodesModel>
+    <Action ID="NavigateToRoom">
+      <input_port name="target_room" type="string"/>
+    </Action>
+    <Action ID="OpenFridge">
+      <input_port name="fridge_id" type="string"/>
+    </Action>
+    <Action ID="PickApple">
+      <input_port name="apple_id" type="string"/>
+    </Action>
+    <Action ID="ExitRoom">
+      <input_port name="exit_id" type="string"/>
+    </Action>
+  </TreeNodesModel>
+</root>
+
